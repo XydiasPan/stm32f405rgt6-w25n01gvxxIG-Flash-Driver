@@ -13,8 +13,8 @@
 
 ## Flash circuit configuration
 The following schematic snippet shows the circuit configuration for the W25N01GVZEIG flash memory, including essential connections like **!CS**, **SPI_SCK**, **MISO**, **MOSI**, **!WP**, and **!HOLD** pins. 
-![Flash Circuit Schematic](.ic_schem.png)
-![Flash Circuit On PCB board](.board.jpg)
+![Flash Circuit Schematic](ic_schem.png)
+![Flash Circuit On PCB board](board.jpg)
 
 ### Key Pin Connections:
 - **!CS**: Chip Select (Initiates and ends SPI commands)
@@ -22,12 +22,12 @@ The following schematic snippet shows the circuit configuration for the W25N01GV
 - **MISO/MOSI**: Data transfer lines
 - **!WP**: Write Protect (Configured as HIGH to enable writing)
 - **!HOLD**: Keeps the flash operational without standby (Configured as HIGH)
-![STM32F405 Pins Configuration](.ioc.png)
+![STM32F405 Pins Configuration](ioc.png)
 
 ## STM32F405 SPI Configuration
 The STM32F405 is configured as a full-duplex master using the SPI protocol, with the configuration shown in the image below:
 
-![STM32F405 SPI Configuration](.spi2_conf.png)
+![STM32F405 SPI Configuration](spi2_conf.png)
 
 ## Flash Driver
 The flash driver files are located in the `Inc` and `Src` directories:
@@ -47,7 +47,7 @@ In the `main.c` file, an example of reading and writing to a single page address
 ## Debugging
 Debugging was achieved via **CDC transmissions**, and a serial oscilloscope was used to monitor data. The image below shows an example of CDC messages during debugging:
 
-![CDC Debugging Example](.cdc.png)
+![CDC Debugging Example](cdc.png)
 
 ## Applications
 This project can be used for various applications where efficient external storage and data management are required using the W25N01GVZEIG flash chip. The provided drivers allow users to interact with the flash memory in a variety of ways, such as:
